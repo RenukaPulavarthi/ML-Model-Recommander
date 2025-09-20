@@ -22,7 +22,7 @@ try:
 except ImportError:
     xgb_available = False
 
-st.title("ML Model Comparison App")
+st.title("ML Model Recommander")
 
 uploaded_file = st.file_uploader("Upload your CSV or Excel file", type=['csv', 'xlsx'])
 if uploaded_file is not None:
@@ -86,4 +86,5 @@ if uploaded_file is not None:
         st.text("Classification Report:")
         st.text(classification_report(y_test, y_pred))
 else:
+
     st.info("Please upload a CSV or Excel file to begin.")
